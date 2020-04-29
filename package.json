@@ -1,0 +1,87 @@
+{
+  "name": "leqi-office-tools",
+  "version": "0.0.1",
+  "description": "office tools",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . ",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "productName":"乐启office工具箱",
+    "appId": "leqi-office-tools",
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "dmg": {
+      "background": "build/appdmg.png",
+      "icon": "build/icon.icns",
+      "iconSize": 100,
+      "contents": [
+        {
+          "x": 380,
+          "y": 280,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 110,
+          "y": 280,
+          "type": "file"
+        }
+      ],
+      "window": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico",
+      "extraResources": {
+        "from": "./officeConvert.exe",
+        "to": "./../officeConvert.exe"
+      }
+    },
+    "nsis": {
+      "oneClick": false, 
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true, 
+      "perMachine": true,
+      "createDesktopShortcut": true,
+      "installerIcon": "./build/icon.ico",
+      "uninstallerIcon": "./build/icon.ico",
+      "installerHeader": "./build/icon.ico",
+      "installerHeaderIcon": "./build/icon.ico"
+
+    }
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^8.2.3",
+    "electron-builder": "^22.4.1",
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "docxtemplater": "^3.17.6",
+    "jquery": "^3.5.0",
+    "layui-src": "^2.5.5",
+    "pizzip": "^3.0.6",
+    "xlsx": "^0.15.6"
+  }
+}

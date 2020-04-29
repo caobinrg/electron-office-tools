@@ -1,0 +1,43 @@
+<form class="layui-form" action="" lay-filter="w2pForm">
+    <div class="layui-form-item">
+        <label class="layui-form-label">输入路径</label>
+        <div class="layui-input-inline" style="width: 450px;">
+            <input type="text" name="w2pInputPath" lay-verify="title" autocomplete="off" placeholder="请输入路径" class="layui-input layui-disabled">
+        </div>
+        <div class="layui-input-inline">
+            <button type="button" class="layui-btn layui-btn-normal" id="w2pInputSelectBtn">选择</button>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">输出路径</label>
+        <div class="layui-input-inline" style="width: 450px;">
+            <input type="text" name="w2pOutPath" lay-verify="title" autocomplete="off" placeholder="请输入路径" class="layui-input layui-disabled">
+        </div>
+        <div class="layui-input-inline">
+            <button type="button" class="layui-btn layui-btn-normal" id="w2pOutSelectBtn">选择</button>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block" >
+          <button type="button" class="layui-btn layui-btn-normal" style="margin-left: 200px;" id="w2pSubmit">开始任务</button>
+        </div>
+    </div>
+</form>
+
+
+<div class="footerPlan">
+    <fieldset class="layui-elem-field layui-field-title">
+      <legend>进度</legend>
+    </fieldset>
+    <div class="layui-row">
+      <div class="layui-col-sm12">
+        <div id="w2pPlanTxt" class="grid-demo grid-demo-bg1">任务进度：无</div>
+      </div>
+    </div>
+    <div class="layui-row">
+      <div class="layui-progress layui-progress-big" lay-showPercent="yes" lay-filter="w2pPlanPercent">
+        <div  class="layui-progress-bar layui-bg-green" lay-percent="0%"></div>
+      </div>
+    </div>
+  </div>

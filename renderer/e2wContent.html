@@ -1,0 +1,91 @@
+<form class="layui-form" action="" lay-filter="e2wForm">
+  <div class="layui-form-item">
+    <label class="layui-form-label">excel文件</label>
+    <div class="layui-input-inline"  style="width: 420px;">
+        <input type="text" name="excelPath" lay-verify="title" autocomplete="off" placeholder="请输入路径" class="layui-input layui-disabled" >
+    </div>
+    <div class="layui-input-inline">
+      <button type="button" class="layui-btn layui-btn-normal" id="excelSelectBtn">选择</button>
+      <button type="button" class="layui-btn layui-btn-normal" id="sheetReadBtn">读取sheet</button>
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">sheet页选择</label>
+    <div class="layui-input-block" style="width: 420px;">
+      <select id="sheet" name="sheet" lay-filter="sheet">
+        <option value=""></option>
+      </select>
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">word模板</label>
+    <div class="layui-input-inline" style="width: 420px;">
+        <input type="text" name="modelPath" lay-verify="title" autocomplete="off" placeholder="请输入路径" class="layui-input layui-disabled">
+    </div>
+    <div class="layui-input-inline">
+      <button type="button" class="layui-btn layui-btn-normal" id="modelSelectBtn">选择</button>
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">输出路径</label>
+    <div class="layui-input-inline" style="width: 420px;">
+        <input type="text" name="outPath" lay-verify="title" autocomplete="off" placeholder="请输入路径" class="layui-input layui-disabled">
+    </div>
+    <div class="layui-input-inline">
+      <button type="button" class="layui-btn layui-btn-normal" id="outSelectBtn">选择</button>
+    </div>
+  </div>
+
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">文件名称</label>
+    <div class="layui-input-inline" style="width: 210px;">
+      <select id="wordName" name="wordName" lay-filter="wordName">
+        <option value=""></option>
+      </select>
+    </div>
+    <div class="layui-input-inline" style="width: 200px;">
+      <input type="text" name="lastName" lay-verify="title" autocomplete="off" placeholder="请输入拼接名称" class="layui-input">
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">PDF路径</label>
+    <div class="layui-input-inline" style="width: 420px;">
+        <input type="text" name="outPDFPath" lay-verify="title" autocomplete="off" placeholder="请输入路径,不填则不生成" class="layui-input layui-disabled">
+    </div>
+    <div class="layui-input-inline">
+      <button type="button" class="layui-btn layui-btn-normal" id="outPDFSelectBtn">选择</button>
+    </div>
+  </div>
+
+
+  <div class="layui-form-item">
+    <div class="layui-input-block" >
+      <button type="button" class="layui-btn layui-btn-normal" style="margin-left: 200px;" id="e2wSubmit">开始任务</button>
+    </div>
+  </div>
+</form>
+
+<div class="footerPlan">
+  <fieldset class="layui-elem-field layui-field-title">
+    <legend>进度</legend>
+  </fieldset>
+  <div class="layui-row">
+    <div class="layui-col-sm12">
+      <div id="planTxt" class="grid-demo grid-demo-bg1">任务进度：无</div>
+    </div>
+  </div>
+  <div class="layui-row">
+    <div class="layui-progress layui-progress-big" lay-showPercent="yes" lay-filter="planPercent">
+      <div  class="layui-progress-bar layui-bg-green" lay-percent="0%"></div>
+    </div>
+  </div>
+</div>
+
+
+
+  

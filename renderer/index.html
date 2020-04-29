@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <link rel="stylesheet" href="../node_modules/layui-src/dist/css/layui.css"  media="all">
+    <title>乐启office工具箱-beat0.0.1</title>
+    <style type="text/css">
+      .layui-body {
+          overflow-y: auto;
+      }
+  
+      body {
+          overflow-y: auto;
+      }
+      .footerPlan{
+        position:fixed;
+        bottom: 10px;
+        width: 760px;
+      }
+      .layui-row{
+        margin-bottom: 12px;
+      }
+  
+  </style>
+  </head>
+  <body>
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+      <ul class="layui-tab-title">
+        <li class="layui-this">excel->word</li>
+        <li>word->pdf(批量)</li>
+      </ul>
+      <div class="layui-tab-content" style="height: 400px;">
+        <div id="e2wContent" class="layui-tab-item layui-show">
+          
+        </div>
+        <div id="w2pContent" class="layui-tab-item">
+        
+        </div>
+    </div> 
+    <!-- <script src="../node_modules/jquery/dist/jquery.js"></script> -->
+    <script>window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.js');</script>
+    <script src="../node_modules/layui-src/dist/layui.js" charset="utf-8"></script>
+    <script src="./loadHtml.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
