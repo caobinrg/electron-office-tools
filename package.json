@@ -62,13 +62,13 @@
 
     }
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/caobinrg/electron-office-tools",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "node",
+    "python",
+    "office",
+    "tools"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
