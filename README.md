@@ -38,4 +38,4 @@ npm run dist
 
 ```
 
-[下载]([链接地址](https://github.com/caobinrg/electron-office-tools/releases))
+[下载](https://github.com/caobinrg/electron-office-tools/releases)
